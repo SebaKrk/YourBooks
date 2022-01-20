@@ -32,7 +32,7 @@ class StarRating : UIView {
         let nummerOfStars = 5
         
         for _ in 1...nummerOfStars {
-            let star = UIImageView(image:UIImage(systemName: "star", withConfiguration:UIImage.SymbolConfiguration(weight: .regular))?.withTintColor(.systemPurple, renderingMode: .alwaysOriginal))
+            let star = UIImageView(image:UIImage(systemName: "star", withConfiguration:UIImage.SymbolConfiguration(weight: .regular))?.withTintColor(.purple, renderingMode: .alwaysOriginal))
             starStackView.addArrangedSubview(star)
         }
     }
@@ -42,7 +42,7 @@ class StarRating : UIView {
         NSLayoutConstraint.activate([
             starStackView.centerXAnchor.constraint(equalTo: centerXAnchor),
             starStackView.centerYAnchor.constraint(equalTo: centerYAnchor),
-            starStackView.widthAnchor.constraint(equalTo: widthAnchor, multiplier: 0.7),
+            starStackView.widthAnchor.constraint(equalTo: widthAnchor, multiplier: 0.65),
             starStackView.heightAnchor.constraint(equalToConstant: 25)
         ])
         

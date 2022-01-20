@@ -12,6 +12,7 @@ class NewBookViewController : UIViewController {
     var stackView = UIStackView()
     let backgroundImge = UIImageView()
     
+    private let titleLabel = CostumeTitleLabel()
     private let bookTitle = CostumeTexField(placeholder: "book title")
     private let bookAuthor = CostumeTexField(placeholder: "book author")
     private let bookReleased = CostumeTexField(placeholder: "book released")
@@ -37,6 +38,7 @@ class NewBookViewController : UIViewController {
         view.backgroundColor = .black
         configureBackgraoundImg()
         configureStackView()
+        configureTitleLabel()
         configureButton()
         configureBackButton()
     }
@@ -49,9 +51,6 @@ class NewBookViewController : UIViewController {
         stackView.distribution = .fillEqually
         stackView.spacing = 20
     }
-    
-    
-    
     
     //    MARK: - SAVE
     
@@ -105,6 +104,18 @@ class NewBookViewController : UIViewController {
             stackView.heightAnchor.constraint(equalToConstant: 250),
             stackView.widthAnchor.constraint(equalTo: view.widthAnchor, multiplier: 0.8)
         ])
+    }
+    private func configureTitleLabel() {
+        view.addSubview(titleLabel)
+        titleLabel.translatesAutoresizingMaskIntoConstraints = false
+        titleLabel.text = "Add New Book"
+        
+        NSLayoutConstraint.activate([
+            titleLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            titleLabel.widthAnchor.constraint(equalTo: view.widthAnchor, multiplier: 0.8),
+            titleLabel.bottomAnchor.constraint(equalTo: stackView.topAnchor, constant: -20)
+        ])
+        
     }
     private func configureBackButton() {
         view.addSubview(backButton)

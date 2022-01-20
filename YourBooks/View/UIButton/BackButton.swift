@@ -18,8 +18,8 @@ class BackButton : UIButton {
         fatalError("init(coder:) has not been implemented")
     }
     private func configure() {
-        let configuration = UIImage.SymbolConfiguration(paletteColors: [.systemPurple])
-        setImage(UIImage(systemName: "arrow.backward", withConfiguration: configuration)?.withRenderingMode(.alwaysTemplate), for: .normal)
+        setImage(UIImage(systemName: "arrow.backward", withConfiguration:UIImage.SymbolConfiguration(weight: .regular))?.withTintColor(.systemPurple, renderingMode: .alwaysOriginal), for: .normal)
+    
         heightAnchor.constraint(equalToConstant: 50).isActive = true
         widthAnchor.constraint(equalToConstant: 50).isActive = true
         
