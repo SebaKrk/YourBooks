@@ -29,9 +29,9 @@
 		93BBFB87279966E1007C807E /* BackButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93BBFB86279966E1007C807E /* BackButton.swift */; };
 		93BBFB8927996B37007C807E /* ValidModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93BBFB8827996B37007C807E /* ValidModel.swift */; };
 		93BBFB8C27997F78007C807E /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93BBFB8B27997F78007C807E /* DataManager.swift */; };
-		93BBFB8E27997FFE007C807E /* ErrorMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93BBFB8D27997FFE007C807E /* ErrorMessage.swift */; };
 		93BBFB9227998A1D007C807E /* AlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93BBFB9127998A1C007C807E /* AlertViewController.swift */; };
 		93BBFB9427998A45007C807E /* UIViewController+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93BBFB9327998A45007C807E /* UIViewController+Ext.swift */; };
+		93FEBA7F279A1B1E00E88E49 /* ErrorMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93FEBA7E279A1B1E00E88E49 /* ErrorMessage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -59,9 +59,9 @@
 		93BBFB86279966E1007C807E /* BackButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackButton.swift; sourceTree = "<group>"; };
 		93BBFB8827996B37007C807E /* ValidModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidModel.swift; sourceTree = "<group>"; };
 		93BBFB8B27997F78007C807E /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
-		93BBFB8D27997FFE007C807E /* ErrorMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorMessage.swift; sourceTree = "<group>"; };
 		93BBFB9127998A1C007C807E /* AlertViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertViewController.swift; sourceTree = "<group>"; };
 		93BBFB9327998A45007C807E /* UIViewController+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Ext.swift"; sourceTree = "<group>"; };
+		93FEBA7E279A1B1E00E88E49 /* ErrorMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorMessage.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -207,7 +207,7 @@
 		93BBFB8F27998022007C807E /* Constants */ = {
 			isa = PBXGroup;
 			children = (
-				93BBFB8D27997FFE007C807E /* ErrorMessage.swift */,
+				93FEBA7E279A1B1E00E88E49 /* ErrorMessage.swift */,
 			);
 			path = Constants;
 			sourceTree = "<group>";
@@ -300,6 +300,7 @@
 				93BBFB7B279959A3007C807E /* BookContainerLabel.swift in Sources */,
 				93BBFB5527994F52007C807E /* SceneDelegate.swift in Sources */,
 				93BBFB6727994FD9007C807E /* BooksTableViewController.swift in Sources */,
+				93FEBA7F279A1B1E00E88E49 /* ErrorMessage.swift in Sources */,
 				93BBFB69279954A3007C807E /* PlusButton.swift in Sources */,
 				93BBFB8327995EE9007C807E /* CostumeTexField.swift in Sources */,
 				93BBFB8C27997F78007C807E /* DataManager.swift in Sources */,
@@ -312,7 +313,6 @@
 				93BBFB6E279955D8007C807E /* BooksReadTableViewCell.swift in Sources */,
 				93BBFB87279966E1007C807E /* BackButton.swift in Sources */,
 				939A8156279A07F40033F007 /* BookStarContainer.swift in Sources */,
-				93BBFB8E27997FFE007C807E /* ErrorMessage.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

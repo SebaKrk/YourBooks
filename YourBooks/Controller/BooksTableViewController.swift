@@ -31,6 +31,7 @@ class BooksTableViewController : UIViewController {
         super.viewWillAppear(animated)
         getBookData()
         showSearchBar()
+        checkIfFavListIsEmpty()
     }
     
     private func setupView() {
@@ -142,6 +143,17 @@ class BooksTableViewController : UIViewController {
             plusButton.widthAnchor.constraint(equalToConstant: 50)
         ])
     }
+    //    MARK: - Helpers
+    
+    private func checkIfFavListIsEmpty() {
+        DataManager.retrieveFavorites { result in
+            switch result {
+            case .success(let favorite):
+                if favorite.isEmpty { self.presentAlertOnMainThred(title: "Upss", message: Messages.emptyList.rawValue) }
+            case .failure: break
+            }
+        }
+    }
 }
 // MARK: - UITableViewDataSource, UITableViewDelegate
 
@@ -149,7 +161,6 @@ extension BooksTableViewController : UITableViewDataSource, UITableViewDelegate 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return  isSearching ? filteredBooks.count : booksRead.count
     }
-    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: BooksReadTableViewCell.identifier) as! BooksReadTableViewCell
         let activeArray = isSearching ? filteredBooks[indexPath.row] : booksRead[indexPath.row]
@@ -158,6 +169,7 @@ extension BooksTableViewController : UITableViewDataSource, UITableViewDelegate 
         
         return cell
     }
+//    MARK: - didSelectRowAt
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
         
@@ -176,6 +188,34 @@ extension BooksTableViewController : UITableViewDataSource, UITableViewDelegate 
         }
         present(desVC, animated: true, completion: nil)
     }
+    
+//    MARK: - trailingSwipeActionsConfigurationForRowAt
+        func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+            // Deleted
+            let deletedItem = UIContextualAction(style: .destructive, title: nil) { (contextualAction, view, boolValue) in
+                let favorite = self.booksRead[indexPath.row]
+                self.booksRead.remove(at: indexPath.row)
+                self.tableView.deleteRows(at: [indexPath], with: .automatic)
+                DataManager.uppdateWith(favorite: favorite, actionType: .remove) { error in
+                    guard let error = error else {return}
+                    self.presentAlertOnMainThred(title: "Upss", message: error.rawValue)
+                }
+                self.presentAlertOnMainThred(title: "Succes", message: Messages.successfullyRemove.rawValue)
+            }
+            deletedItem.image = UIImage(systemName: "xmark", withConfiguration:UIImage.SymbolConfiguration(weight: .light))?.withTintColor(.black, renderingMode: .alwaysOriginal)
+            deletedItem.backgroundColor = UIColor(displayP3Red: 0, green: 0, blue: 0, alpha: 0.1)
+            
+            // Share
+            let shareItem = UIContextualAction(style: .normal, title: nil) { contextualAction, view, boolValue in
+                print("share")
+            }
+            shareItem.image = UIImage(systemName: "arrow.up", withConfiguration:UIImage.SymbolConfiguration(weight: .light))?.withTintColor(.black, renderingMode: .alwaysOriginal)
+            shareItem.backgroundColor =  UIColor(displayP3Red: 0, green: 0, blue: 0, alpha: 0.1)
+    
+            let swipeActions = UISwipeActionsConfiguration(actions: [deletedItem, shareItem])
+    
+            return swipeActions
+        }
 }
 
 // MARK: - UISearchBarDelegate

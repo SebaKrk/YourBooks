@@ -15,8 +15,8 @@ class BookViewController : UIViewController {
     let bookAuthor = UILabel()
     
     let bookRelased = BookContainerLabel()
-    let endRead = BookContainerLabel(text: "31-01-22")
-    let cosRead = BookContainerLabel(text: "chujoa ksiazka")
+    let bookRating = BookStarContainer()
+    let bookEmpty = BookContainerLabel()
     
     var stackView = UIStackView()
     
@@ -96,26 +96,26 @@ class BookViewController : UIViewController {
     }
     
     private func configureEndLabel() {
-        view.addSubview(endRead)
-        endRead.translatesAutoresizingMaskIntoConstraints = false
+        view.addSubview(bookRating)
+        bookRating.translatesAutoresizingMaskIntoConstraints = false
     
         NSLayoutConstraint.activate([
-            endRead.topAnchor.constraint(equalTo: bookRelased.bottomAnchor, constant: 20),
-            endRead.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-            endRead.widthAnchor.constraint(equalTo: view.widthAnchor, multiplier: 0.7),
-            endRead.heightAnchor.constraint(equalToConstant: 50)
+            bookRating.topAnchor.constraint(equalTo: bookRelased.bottomAnchor, constant: 20),
+            bookRating.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            bookRating.widthAnchor.constraint(equalTo: view.widthAnchor, multiplier: 0.7),
+            bookRating.heightAnchor.constraint(equalToConstant: 50)
         ])
     }
 
     private func configureCosLabel() {
-        view.addSubview(cosRead)
-        cosRead.translatesAutoresizingMaskIntoConstraints = false
+        view.addSubview(bookEmpty)
+        bookEmpty.translatesAutoresizingMaskIntoConstraints = false
     
         NSLayoutConstraint.activate([
-            cosRead.topAnchor.constraint(equalTo: endRead.bottomAnchor, constant: 20),
-            cosRead.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-            cosRead.widthAnchor.constraint(equalTo: view.widthAnchor, multiplier: 0.7),
-            cosRead.heightAnchor.constraint(equalToConstant: 50)
+            bookEmpty.topAnchor.constraint(equalTo: bookRating.bottomAnchor, constant: 20),
+            bookEmpty.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            bookEmpty.widthAnchor.constraint(equalTo: view.widthAnchor, multiplier: 0.7),
+            bookEmpty.heightAnchor.constraint(equalToConstant: 50)
         ])
     }
     
