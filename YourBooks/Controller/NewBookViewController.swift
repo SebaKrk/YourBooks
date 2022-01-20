@@ -10,6 +10,7 @@ import UIKit
 class NewBookViewController : UIViewController {
     
     var stackView = UIStackView()
+    let backgroundImge = UIImageView()
     
     private let bookTitle = CostumeTexField(placeholder: "book title")
     private let bookAuthor = CostumeTexField(placeholder: "book author")
@@ -31,11 +32,13 @@ class NewBookViewController : UIViewController {
         
     }
     private func setupView() {
-        view.setGradien(colorOne: .purple, colorTwo: .systemBlue)
+        view.backgroundColor = .black
+        configureBackgraoundImg()
         configureStackView()
         configureButton()
         configureBackButton()
     }
+    
     //    MARK: - StackView
     
     private func setupStackView() {
@@ -57,7 +60,7 @@ class NewBookViewController : UIViewController {
                 self.presentAlertOnMainThred(title: "Succes", message: Messages.successfullyAdded.rawValue)
                 return
             }
-            print("error \(error)")
+            self.presentAlertOnMainThred(title: "Error", message: error.rawValue)
         }
     }
     
@@ -73,6 +76,18 @@ class NewBookViewController : UIViewController {
     }
     
     //    MARK: - Constraints
+    
+    private func configureBackgraoundImg() {
+        view.addSubview(backgroundImge)
+        backgroundImge.translatesAutoresizingMaskIntoConstraints = false
+        backgroundImge.contentMode = .scaleAspectFit
+        backgroundImge.image = UIImage(named: "Background2")
+        
+        NSLayoutConstraint.activate([
+            backgroundImge.bottomAnchor.constraint(equalTo: view.bottomAnchor),
+            backgroundImge.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+        ])
+    }
     
     private func configureStackView() {
         view.addSubview(stackView)

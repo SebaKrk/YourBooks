@@ -19,7 +19,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         guard let widnowScene = (scene as? UIWindowScene) else { return }
         window = UIWindow(windowScene: widnowScene)
         
-        let desVC =BooksTableViewController()
+        let desVC = BooksTableViewController()
         window?.rootViewController = UINavigationController(rootViewController: desVC)
         window?.makeKeyAndVisible()
         window?.overrideUserInterfaceStyle = .dark

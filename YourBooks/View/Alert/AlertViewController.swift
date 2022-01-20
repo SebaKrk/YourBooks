@@ -50,14 +50,14 @@ class AlertViewController : UIViewController {
         view.addSubview(container)
         container.translatesAutoresizingMaskIntoConstraints = false
         container.backgroundColor = .white
-        container.layer.borderColor = UIColor.systemPurple.cgColor
-        container.layer.borderWidth = 0.5
+        container.layer.borderColor = UIColor.purple.cgColor
+        container.layer.borderWidth = 5
         
         NSLayoutConstraint.activate([
             container.centerXAnchor.constraint(equalTo: view.centerXAnchor),
             container.centerYAnchor.constraint(equalTo: view.centerYAnchor),
-            container.widthAnchor.constraint(equalTo: view.widthAnchor, multiplier: 0.68),
-            container.heightAnchor.constraint(equalTo: view.heightAnchor, multiplier: 0.35)
+            container.widthAnchor.constraint(equalTo: view.widthAnchor, multiplier: 0.75),
+            container.heightAnchor.constraint(equalTo: view.heightAnchor, multiplier: 0.3)
         ])
     }
     private func configureTitleLabel() {
@@ -81,14 +81,15 @@ class AlertViewController : UIViewController {
         dissmisButton.setTitle("OK", for: .normal)
         dissmisButton.setTitleColor(.white, for: .normal)
         dissmisButton.backgroundColor = .black
-        dissmisButton.layer.cornerRadius = 25
-        dissmisButton.widthAnchor.constraint(equalToConstant: 50).isActive = true
-        dissmisButton.heightAnchor.constraint(equalToConstant: 50).isActive = true
+        dissmisButton.layer.cornerRadius = 10
         dissmisButton.addTarget(self, action: #selector(handleDissmisButton), for: .touchUpInside)
         
         NSLayoutConstraint.activate([
             dissmisButton.centerXAnchor.constraint(equalTo: container.centerXAnchor),
-            dissmisButton.bottomAnchor.constraint(equalTo: container.bottomAnchor, constant: -20)
+            dissmisButton.bottomAnchor.constraint(equalTo: container.bottomAnchor, constant: -20),
+            dissmisButton.leadingAnchor.constraint(equalTo: container.leadingAnchor, constant: 20),
+            dissmisButton.trailingAnchor.constraint(equalTo: container.trailingAnchor, constant: -20),
+            dissmisButton.heightAnchor.constraint(equalToConstant: 50)
         ])
     }
     private func configureMessageLabel() {
