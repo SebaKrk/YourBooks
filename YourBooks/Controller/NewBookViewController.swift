@@ -16,13 +16,15 @@ class NewBookViewController : UIViewController {
     private let bookAuthor = CostumeTexField(placeholder: "book author")
     private let bookReleased = CostumeTexField(placeholder: "book released")
     
-    private let bookScore = UITextField()
+    private let bookScore = StarRating()
     private let bookIMG = UIImageView()
     
     private let doneButton = DoneButton()
     private let backButton = BackButton()
     
     private var viewModel = ValidModel()
+    
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -42,11 +44,15 @@ class NewBookViewController : UIViewController {
     //    MARK: - StackView
     
     private func setupStackView() {
-        stackView = UIStackView(arrangedSubviews: [bookTitle,bookAuthor,bookReleased,doneButton])
+        stackView = UIStackView(arrangedSubviews: [bookTitle,bookAuthor,bookReleased,bookScore,doneButton])
         stackView.axis = .vertical
         stackView.distribution = .fillEqually
         stackView.spacing = 20
     }
+    
+    
+    
+    
     //    MARK: - SAVE
     
     @objc func handleDoneButton() {

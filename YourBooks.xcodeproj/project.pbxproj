@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		930F68BE2799F0400060E22A /* StarRating.swift in Sources */ = {isa = PBXBuildFile; fileRef = 930F68BD2799F0400060E22A /* StarRating.swift */; };
 		93BBFB5327994F52007C807E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93BBFB5227994F52007C807E /* AppDelegate.swift */; };
 		93BBFB5527994F52007C807E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93BBFB5427994F52007C807E /* SceneDelegate.swift */; };
 		93BBFB5C27994F55007C807E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 93BBFB5B27994F55007C807E /* Assets.xcassets */; };
@@ -32,6 +33,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		930F68BD2799F0400060E22A /* StarRating.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarRating.swift; sourceTree = "<group>"; };
 		93BBFB4F27994F52007C807E /* YourBooks.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YourBooks.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		93BBFB5227994F52007C807E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		93BBFB5427994F52007C807E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -69,6 +71,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		930F68BC2799F0280060E22A /* View */ = {
+			isa = PBXGroup;
+			children = (
+				930F68BD2799F0400060E22A /* StarRating.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		93BBFB4627994F52007C807E = {
 			isa = PBXGroup;
 			children = (
@@ -106,6 +116,7 @@
 		93BBFB6A279954D3007C807E /* View */ = {
 			isa = PBXGroup;
 			children = (
+				930F68BC2799F0280060E22A /* View */,
 				93BBFB9027998A08007C807E /* Alert */,
 				93BBFB8127995EB5007C807E /* UITextField */,
 				93BBFB7027995632007C807E /* UILabel */,
@@ -287,6 +298,7 @@
 				93BBFB8C27997F78007C807E /* DataManager.swift in Sources */,
 				93BBFB7927995950007C807E /* BookViewController.swift in Sources */,
 				93BBFB76279956C5007C807E /* BookModel.swift in Sources */,
+				930F68BE2799F0400060E22A /* StarRating.swift in Sources */,
 				93BBFB852799628C007C807E /* DoneButton.swift in Sources */,
 				93BBFB8927996B37007C807E /* ValidModel.swift in Sources */,
 				93BBFB8027995D19007C807E /* NewBookViewController.swift in Sources */,
