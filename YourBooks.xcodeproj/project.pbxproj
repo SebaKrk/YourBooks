@@ -9,21 +9,53 @@
 /* Begin PBXBuildFile section */
 		93BBFB5327994F52007C807E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93BBFB5227994F52007C807E /* AppDelegate.swift */; };
 		93BBFB5527994F52007C807E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93BBFB5427994F52007C807E /* SceneDelegate.swift */; };
-		93BBFB5727994F52007C807E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93BBFB5627994F52007C807E /* ViewController.swift */; };
-		93BBFB5A27994F52007C807E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 93BBFB5827994F52007C807E /* Main.storyboard */; };
 		93BBFB5C27994F55007C807E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 93BBFB5B27994F55007C807E /* Assets.xcassets */; };
 		93BBFB5F27994F55007C807E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 93BBFB5D27994F55007C807E /* LaunchScreen.storyboard */; };
+		93BBFB6727994FD9007C807E /* BooksTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93BBFB6627994FD9007C807E /* BooksTableViewController.swift */; };
+		93BBFB69279954A3007C807E /* PlusButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93BBFB68279954A3007C807E /* PlusButton.swift */; };
+		93BBFB6E279955D8007C807E /* BooksReadTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93BBFB6D279955D8007C807E /* BooksReadTableViewCell.swift */; };
+		93BBFB7227995655007C807E /* BookNameLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93BBFB7127995655007C807E /* BookNameLabel.swift */; };
+		93BBFB7427995671007C807E /* BookAuthorLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93BBFB7327995671007C807E /* BookAuthorLabel.swift */; };
+		93BBFB76279956C5007C807E /* BookModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93BBFB75279956C5007C807E /* BookModel.swift */; };
+		93BBFB7927995950007C807E /* BookViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93BBFB7827995950007C807E /* BookViewController.swift */; };
+		93BBFB7B279959A3007C807E /* BookContainerLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93BBFB7A279959A3007C807E /* BookContainerLabel.swift */; };
+		93BBFB7E279959E6007C807E /* UIView+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93BBFB7D279959E6007C807E /* UIView+Ext.swift */; };
+		93BBFB8027995D19007C807E /* NewBookViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93BBFB7F27995D19007C807E /* NewBookViewController.swift */; };
+		93BBFB8327995EE9007C807E /* CostumeTexField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93BBFB8227995EE9007C807E /* CostumeTexField.swift */; };
+		93BBFB852799628C007C807E /* DoneButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93BBFB842799628C007C807E /* DoneButton.swift */; };
+		93BBFB87279966E1007C807E /* BackButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93BBFB86279966E1007C807E /* BackButton.swift */; };
+		93BBFB8927996B37007C807E /* ValidModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93BBFB8827996B37007C807E /* ValidModel.swift */; };
+		93BBFB8C27997F78007C807E /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93BBFB8B27997F78007C807E /* DataManager.swift */; };
+		93BBFB8E27997FFE007C807E /* ErrorMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93BBFB8D27997FFE007C807E /* ErrorMessage.swift */; };
+		93BBFB9227998A1D007C807E /* AlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93BBFB9127998A1C007C807E /* AlertViewController.swift */; };
+		93BBFB9427998A45007C807E /* UIViewController+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93BBFB9327998A45007C807E /* UIViewController+Ext.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		93BBFB4F27994F52007C807E /* YourBooks.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YourBooks.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		93BBFB5227994F52007C807E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		93BBFB5427994F52007C807E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		93BBFB5627994F52007C807E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		93BBFB5927994F52007C807E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		93BBFB5B27994F55007C807E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		93BBFB5E27994F55007C807E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		93BBFB6027994F55007C807E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		93BBFB6627994FD9007C807E /* BooksTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BooksTableViewController.swift; sourceTree = "<group>"; };
+		93BBFB68279954A3007C807E /* PlusButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlusButton.swift; sourceTree = "<group>"; };
+		93BBFB6D279955D8007C807E /* BooksReadTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BooksReadTableViewCell.swift; sourceTree = "<group>"; };
+		93BBFB7127995655007C807E /* BookNameLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookNameLabel.swift; sourceTree = "<group>"; };
+		93BBFB7327995671007C807E /* BookAuthorLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookAuthorLabel.swift; sourceTree = "<group>"; };
+		93BBFB75279956C5007C807E /* BookModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookModel.swift; sourceTree = "<group>"; };
+		93BBFB7827995950007C807E /* BookViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookViewController.swift; sourceTree = "<group>"; };
+		93BBFB7A279959A3007C807E /* BookContainerLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookContainerLabel.swift; sourceTree = "<group>"; };
+		93BBFB7D279959E6007C807E /* UIView+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Ext.swift"; sourceTree = "<group>"; };
+		93BBFB7F27995D19007C807E /* NewBookViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewBookViewController.swift; sourceTree = "<group>"; };
+		93BBFB8227995EE9007C807E /* CostumeTexField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CostumeTexField.swift; sourceTree = "<group>"; };
+		93BBFB842799628C007C807E /* DoneButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoneButton.swift; sourceTree = "<group>"; };
+		93BBFB86279966E1007C807E /* BackButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackButton.swift; sourceTree = "<group>"; };
+		93BBFB8827996B37007C807E /* ValidModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidModel.swift; sourceTree = "<group>"; };
+		93BBFB8B27997F78007C807E /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
+		93BBFB8D27997FFE007C807E /* ErrorMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorMessage.swift; sourceTree = "<group>"; };
+		93BBFB9127998A1C007C807E /* AlertViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertViewController.swift; sourceTree = "<group>"; };
+		93BBFB9327998A45007C807E /* UIViewController+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Ext.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,13 +90,117 @@
 			children = (
 				93BBFB5227994F52007C807E /* AppDelegate.swift */,
 				93BBFB5427994F52007C807E /* SceneDelegate.swift */,
-				93BBFB5627994F52007C807E /* ViewController.swift */,
-				93BBFB5827994F52007C807E /* Main.storyboard */,
+				93BBFB8F27998022007C807E /* Constants */,
+				93BBFB7C279959DB007C807E /* Extensions */,
+				93BBFB8A27997F35007C807E /* Manager */,
+				93BBFB77279956D1007C807E /* Model */,
+				93BBFB6A279954D3007C807E /* View */,
+				93BBFB6C2799551B007C807E /* Controller */,
 				93BBFB5B27994F55007C807E /* Assets.xcassets */,
 				93BBFB5D27994F55007C807E /* LaunchScreen.storyboard */,
 				93BBFB6027994F55007C807E /* Info.plist */,
 			);
 			path = YourBooks;
+			sourceTree = "<group>";
+		};
+		93BBFB6A279954D3007C807E /* View */ = {
+			isa = PBXGroup;
+			children = (
+				93BBFB9027998A08007C807E /* Alert */,
+				93BBFB8127995EB5007C807E /* UITextField */,
+				93BBFB7027995632007C807E /* UILabel */,
+				93BBFB6B279954DB007C807E /* UIButton */,
+				93BBFB6F279955DC007C807E /* Cell */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		93BBFB6B279954DB007C807E /* UIButton */ = {
+			isa = PBXGroup;
+			children = (
+				93BBFB68279954A3007C807E /* PlusButton.swift */,
+				93BBFB842799628C007C807E /* DoneButton.swift */,
+				93BBFB86279966E1007C807E /* BackButton.swift */,
+			);
+			path = UIButton;
+			sourceTree = "<group>";
+		};
+		93BBFB6C2799551B007C807E /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				93BBFB6627994FD9007C807E /* BooksTableViewController.swift */,
+				93BBFB7F27995D19007C807E /* NewBookViewController.swift */,
+				93BBFB7827995950007C807E /* BookViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		93BBFB6F279955DC007C807E /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				93BBFB6D279955D8007C807E /* BooksReadTableViewCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		93BBFB7027995632007C807E /* UILabel */ = {
+			isa = PBXGroup;
+			children = (
+				93BBFB7127995655007C807E /* BookNameLabel.swift */,
+				93BBFB7327995671007C807E /* BookAuthorLabel.swift */,
+				93BBFB7A279959A3007C807E /* BookContainerLabel.swift */,
+			);
+			path = UILabel;
+			sourceTree = "<group>";
+		};
+		93BBFB77279956D1007C807E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				93BBFB75279956C5007C807E /* BookModel.swift */,
+				93BBFB8827996B37007C807E /* ValidModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		93BBFB7C279959DB007C807E /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				93BBFB7D279959E6007C807E /* UIView+Ext.swift */,
+				93BBFB9327998A45007C807E /* UIViewController+Ext.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		93BBFB8127995EB5007C807E /* UITextField */ = {
+			isa = PBXGroup;
+			children = (
+				93BBFB8227995EE9007C807E /* CostumeTexField.swift */,
+			);
+			path = UITextField;
+			sourceTree = "<group>";
+		};
+		93BBFB8A27997F35007C807E /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				93BBFB8B27997F78007C807E /* DataManager.swift */,
+			);
+			path = Manager;
+			sourceTree = "<group>";
+		};
+		93BBFB8F27998022007C807E /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				93BBFB8D27997FFE007C807E /* ErrorMessage.swift */,
+			);
+			path = Constants;
+			sourceTree = "<group>";
+		};
+		93BBFB9027998A08007C807E /* Alert */ = {
+			isa = PBXGroup;
+			children = (
+				93BBFB9127998A1C007C807E /* AlertViewController.swift */,
+			);
+			path = Alert;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -127,7 +263,6 @@
 			files = (
 				93BBFB5F27994F55007C807E /* LaunchScreen.storyboard in Resources */,
 				93BBFB5C27994F55007C807E /* Assets.xcassets in Resources */,
-				93BBFB5A27994F52007C807E /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -138,23 +273,32 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				93BBFB5727994F52007C807E /* ViewController.swift in Sources */,
+				93BBFB7427995671007C807E /* BookAuthorLabel.swift in Sources */,
+				93BBFB7E279959E6007C807E /* UIView+Ext.swift in Sources */,
+				93BBFB9427998A45007C807E /* UIViewController+Ext.swift in Sources */,
+				93BBFB7227995655007C807E /* BookNameLabel.swift in Sources */,
 				93BBFB5327994F52007C807E /* AppDelegate.swift in Sources */,
+				93BBFB9227998A1D007C807E /* AlertViewController.swift in Sources */,
+				93BBFB7B279959A3007C807E /* BookContainerLabel.swift in Sources */,
 				93BBFB5527994F52007C807E /* SceneDelegate.swift in Sources */,
+				93BBFB6727994FD9007C807E /* BooksTableViewController.swift in Sources */,
+				93BBFB69279954A3007C807E /* PlusButton.swift in Sources */,
+				93BBFB8327995EE9007C807E /* CostumeTexField.swift in Sources */,
+				93BBFB8C27997F78007C807E /* DataManager.swift in Sources */,
+				93BBFB7927995950007C807E /* BookViewController.swift in Sources */,
+				93BBFB76279956C5007C807E /* BookModel.swift in Sources */,
+				93BBFB852799628C007C807E /* DoneButton.swift in Sources */,
+				93BBFB8927996B37007C807E /* ValidModel.swift in Sources */,
+				93BBFB8027995D19007C807E /* NewBookViewController.swift in Sources */,
+				93BBFB6E279955D8007C807E /* BooksReadTableViewCell.swift in Sources */,
+				93BBFB87279966E1007C807E /* BackButton.swift in Sources */,
+				93BBFB8E27997FFE007C807E /* ErrorMessage.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		93BBFB5827994F52007C807E /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				93BBFB5927994F52007C807E /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		93BBFB5D27994F55007C807E /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -294,7 +438,7 @@
 				INFOPLIST_FILE = YourBooks/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -306,7 +450,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -322,7 +466,7 @@
 				INFOPLIST_FILE = YourBooks/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -334,7 +478,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
