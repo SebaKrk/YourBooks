@@ -41,6 +41,7 @@ class NewBookViewController : UIViewController {
         configureTitleLabel()
         configureButton()
         configureBackButton()
+        dissmisKeybordTapgesture()
     }
     
     //    MARK: - StackView
@@ -71,6 +72,11 @@ class NewBookViewController : UIViewController {
     
     @objc func handleBackButton() {
         dismiss(animated: true, completion: nil)
+    }
+    
+    func dissmisKeybordTapgesture() {
+        let tap = UITapGestureRecognizer(target: view, action: #selector(UIView.endEditing))
+        view.addGestureRecognizer(tap)
     }
     
     //    MARK: Buttons Target
