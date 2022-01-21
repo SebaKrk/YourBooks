@@ -16,4 +16,8 @@ extension UIViewController {
             self.present(alertVC, animated: true, completion: nil)
         }
     }
+    func dissmisKeybordTapgesture() {
+        let tap = UITapGestureRecognizer(target: view, action: #selector(UIView.endEditing))
+        view.addGestureRecognizer(tap)
+    }
 }
