@@ -51,6 +51,8 @@ class NewBookViewController : UIViewController {
         stackView.axis = .vertical
         stackView.distribution = .fillEqually
         stackView.spacing = 20
+        
+        bookReleased.keyboardType = .numbersAndPunctuation
     }
     
     //    MARK: - SAVE
@@ -72,11 +74,6 @@ class NewBookViewController : UIViewController {
     
     @objc func handleBackButton() {
         dismiss(animated: true, completion: nil)
-    }
-    
-    func dissmisKeybordTapgesture() {
-        let tap = UITapGestureRecognizer(target: view, action: #selector(UIView.endEditing))
-        view.addGestureRecognizer(tap)
     }
     
     //    MARK: Buttons Target
