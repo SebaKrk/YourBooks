@@ -30,10 +30,15 @@ class BookViewController : UIViewController {
         configureStartLabel()
         configureEndLabel()
         configureCosLabel()
+        dissmisTapgesture()
     }
     
     private func setupView() {
         view.setGradien(colorOne: .purple, colorTwo: .systemBlue)
+    }
+    func dissmisTapgesture() {
+        let tap = UITapGestureRecognizer(target: view, action: #selector(UIView.endEditing))
+        view.addGestureRecognizer(tap)
     }
     
     private func configureBookIMG() {
