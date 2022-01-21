@@ -64,11 +64,11 @@ class AlertViewController : UIViewController {
         container.addSubview(titleLabel)
         titleLabel.translatesAutoresizingMaskIntoConstraints = false
         titleLabel.textColor = .black
-        titleLabel.font = UIFont(name: "Baskerville-Bold", size: 34)
+        titleLabel.font = UIFont(name: "Baskerville-Bold", size: 32)
         titleLabel.textAlignment = .center
         
         NSLayoutConstraint.activate([
-            titleLabel.topAnchor.constraint(equalTo: container.topAnchor, constant: 10),
+            titleLabel.topAnchor.constraint(equalTo: container.topAnchor,constant: 10),
             titleLabel.leadingAnchor.constraint(equalTo: container.leadingAnchor),
             titleLabel.trailingAnchor.constraint(equalTo: container.trailingAnchor),
             titleLabel.heightAnchor.constraint(equalToConstant: 50)
@@ -97,13 +97,13 @@ class AlertViewController : UIViewController {
         messageLabel.translatesAutoresizingMaskIntoConstraints = false
         
         messageLabel.font = UIFont(name: "Baskerville", size: 24)
-        messageLabel.textColor = .black
+        messageLabel.textColor = .darkGray
         messageLabel.numberOfLines = 4
         messageLabel.textAlignment = .center
         
         
         NSLayoutConstraint.activate([
-            messageLabel.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: 20),
+            messageLabel.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: 10),
             messageLabel.leadingAnchor.constraint(equalTo: container.leadingAnchor, constant: 20),
             messageLabel.trailingAnchor.constraint(equalTo: container.trailingAnchor,constant: -20),
             messageLabel.bottomAnchor.constraint(equalTo: dissmisButton.topAnchor,constant: -20)
