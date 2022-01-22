@@ -4,7 +4,7 @@
 ### This is my app "YourBook" that I created for the recruitment task.
 
 ##### Display a list of books the user have read.
-<img src="screen.01.png" width="300" height="600" > <img src="screen.02.png" width="300" height="600" >
+<img src="AppScreen\screen.01.png" width="300" height="600" > <img src="screen.02.png" width="300" height="600" >
 
 ##### Add a button that sorts the list alphabetically (from A to Z, and vice versa)
 <img src="screen.03.png" width="300" height="600" > <img src="screen.04.png" width="300" height="600" >
