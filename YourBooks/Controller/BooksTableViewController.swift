@@ -90,7 +90,7 @@ class BooksTableViewController : UIViewController {
                     self.tableView.reloadData()
                 }
             case .failure(let error):
-                print(error)
+                self.presentAlertOnMainThred(title: "Upsss", message: error.rawValue)
             }
         }
     }

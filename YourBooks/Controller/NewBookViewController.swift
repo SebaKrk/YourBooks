@@ -68,7 +68,7 @@ class NewBookViewController : UIViewController {
                 self.presentAlertOnMainThred(title: "Succes", message: Messages.successfullyAdded.rawValue)
                 return
             }
-            self.presentAlertOnMainThred(title: "Error", message: error.rawValue)
+            self.presentAlertOnMainThred(title: "Upsss", message: error.rawValue)
         }
     }
     

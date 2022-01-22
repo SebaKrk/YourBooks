@@ -20,6 +20,8 @@ class BookViewController : UIViewController {
     
     var stackView = UIStackView()
     
+//    MARK: - ViewDidLoad
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setupView()
@@ -36,10 +38,14 @@ class BookViewController : UIViewController {
     private func setupView() {
         view.setGradien(colorOne: .purple, colorTwo: .systemBlue)
     }
+//    MARK: - UITapGestureRecognizer
+    
     func dissmisTapgesture() {
         let tap = UITapGestureRecognizer(target: view, action: #selector(UIView.endEditing))
         view.addGestureRecognizer(tap)
     }
+    
+//    MARK: - Constraints
     
     private func configureBookIMG() {
         view.addSubview(bookIMG)
@@ -78,7 +84,6 @@ class BookViewController : UIViewController {
         bookAuthor.textAlignment = .center
         bookAuthor.textColor = .white
         bookAuthor.numberOfLines = 2
-        
         
         NSLayoutConstraint.activate([
             bookAuthor.bottomAnchor.constraint(equalTo: bookIMG.bottomAnchor, constant: -10),
