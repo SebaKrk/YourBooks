@@ -16,5 +16,7 @@ enum Messages : String {
     case successfullyAdded = "You've successfully added this Book to your favorites"
     case emptyList = "Your List is empty.\nYou haven't added anything yet"
     case successfullyRemove = "You've successfully remove this Book from your favorites"
+    case subscription = "Unlock premium subscription"
+    
 }
 

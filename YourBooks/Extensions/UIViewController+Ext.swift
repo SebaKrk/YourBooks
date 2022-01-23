@@ -8,13 +8,11 @@
 import UIKit
 
 extension UIViewController {
-    func presentAlertOnMainThred(title: String, message: String) {
-        DispatchQueue.main.async {
+    func presentAlertVC(title: String, message: String) {
             let alertVC = AlertViewController(title: title, message: message)
             alertVC.modalPresentationStyle = .overFullScreen
             alertVC.modalTransitionStyle = .crossDissolve
             self.present(alertVC, animated: true, completion: nil)
-        }
     }
     func dissmisKeybordTapgesture() {
         let tap = UITapGestureRecognizer(target: view, action: #selector(UIView.endEditing))

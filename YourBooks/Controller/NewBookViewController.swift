@@ -65,10 +65,10 @@ class NewBookViewController : UIViewController {
         let favorite = BookModel(title: title, author: author, relased: released)
         DataManager.uppdateWith(favorite: favorite, actionType: .add) { error in
             guard let error = error else {
-                self.presentAlertOnMainThred(title: "Succes", message: Messages.successfullyAdded.rawValue)
+                self.presentAlertVC(title: "Succes", message: Messages.successfullyAdded.rawValue)
                 return
             }
-            self.presentAlertOnMainThred(title: "Upsss", message: error.rawValue)
+            self.presentAlertVC(title: "Upsss", message: error.rawValue)
         }
     }
     

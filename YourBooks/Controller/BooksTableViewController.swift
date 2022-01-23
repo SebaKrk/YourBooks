@@ -90,7 +90,7 @@ class BooksTableViewController : UIViewController {
                     self.tableView.reloadData()
                 }
             case .failure(let error):
-                self.presentAlertOnMainThred(title: "Upsss", message: error.rawValue)
+                self.presentAlertVC(title: "Upsss", message: error.rawValue)
             }
         }
     }
@@ -149,7 +149,7 @@ class BooksTableViewController : UIViewController {
         DataManager.retrieveFavorites { result in
             switch result {
             case .success(let favorite):
-                if favorite.isEmpty { self.presentAlertOnMainThred(title: "Upss", message: Messages.emptyList.rawValue) }
+                if favorite.isEmpty { self.presentAlertVC(title: "Upss", message: Messages.emptyList.rawValue) }
             case .failure: break
             }
         }
@@ -197,16 +197,16 @@ extension BooksTableViewController : UITableViewDataSource, UITableViewDelegate 
                 self.tableView.deleteRows(at: [indexPath], with: .automatic)
                 DataManager.uppdateWith(favorite: favorite, actionType: .remove) { error in
                     guard let error = error else {return}
-                    self.presentAlertOnMainThred(title: "Upss", message: error.rawValue)
+                    self.presentAlertVC(title: "Upss", message: error.rawValue)
                 }
-                self.presentAlertOnMainThred(title: "Succes", message: Messages.successfullyRemove.rawValue)
+                self.presentAlertVC(title: "Succes", message: Messages.successfullyRemove.rawValue)
             }
             deletedItem.image = UIImage(systemName: "xmark", withConfiguration:UIImage.SymbolConfiguration(weight: .light))?.withTintColor(.black, renderingMode: .alwaysOriginal)
             deletedItem.backgroundColor = UIColor(displayP3Red: 0, green: 0, blue: 0, alpha: 0.1)
             
             // Share
             let shareItem = UIContextualAction(style: .normal, title: nil) { contextualAction, view, boolValue in
-                print("share")
+                self.presentAlertVC(title: "Upps", message: Messages.subscription.rawValue)
             }
             shareItem.image = UIImage(systemName: "arrow.up", withConfiguration:UIImage.SymbolConfiguration(weight: .light))?.withTintColor(.black, renderingMode: .alwaysOriginal)
             shareItem.backgroundColor =  UIColor(displayP3Red: 0, green: 0, blue: 0, alpha: 0.1)
