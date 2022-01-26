@@ -103,8 +103,7 @@ class BooksTableViewController : UIViewController {
     
     @objc func handleAddButton() {
         let desVC = NewBookViewController()
-        desVC.modalPresentationStyle = .fullScreen
-        present(desVC, animated: true, completion: nil)
+        navigationController?.pushViewController(desVC, animated: true)
     }
     
     //    MARK: - Constraints

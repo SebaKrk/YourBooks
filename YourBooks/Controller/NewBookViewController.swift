@@ -19,13 +19,9 @@ class NewBookViewController : UIViewController {
     
     private let bookScore = StarRating()
     private let bookIMG = UIImageView()
-    
-    private let doneButton = DoneButton()
-    private let backButton = BackButton()
-    
+    private let addBookButton = DoneButton()
+
     private var viewModel = ValidModel()
-    
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -40,14 +36,18 @@ class NewBookViewController : UIViewController {
         configureStackView()
         configureTitleLabel()
         configureButton()
-        configureBackButton()
+        configureNavigationController()
         view.addDismissKeyboardOnTapGesture()
     }
+    private func configureNavigationController() {
+        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Done", style: .done, target: self, action: #selector(handleBackButton))
+    }
+    
     
     //    MARK: - StackView
     
     private func setupStackView() {
-        stackView = UIStackView(arrangedSubviews: [bookTitle,bookAuthor,bookReleased,bookScore,doneButton])
+        stackView = UIStackView(arrangedSubviews: [bookTitle,bookAuthor,bookReleased,bookScore,addBookButton])
         stackView.axis = .vertical
         stackView.distribution = .fillEqually
         stackView.spacing = 20
@@ -57,7 +57,7 @@ class NewBookViewController : UIViewController {
     
     //    MARK: - SAVE
     
-    @objc func handleDoneButton() {
+    @objc func handleAddBookButton() {
         guard let title = bookTitle.text else { return }
         guard let author = bookAuthor.text else { return}
         guard let released = bookReleased.text else { return }
@@ -73,14 +73,14 @@ class NewBookViewController : UIViewController {
     }
     
     @objc func handleBackButton() {
-        dismiss(animated: true, completion: nil)
+        
+        navigationController?.popViewController(animated: true)
     }
     
     //    MARK: Buttons Target
     
     private func configureButton() {
-        doneButton.addTarget(self, action: #selector(handleDoneButton), for: .touchUpInside)
-        backButton.addTarget(self, action: #selector(handleBackButton), for: .touchUpInside)
+        addBookButton.addTarget(self, action: #selector(handleAddBookButton), for: .touchUpInside)
     }
     
     //    MARK: - Constraints
@@ -120,15 +120,6 @@ class NewBookViewController : UIViewController {
         ])
         
     }
-    private func configureBackButton() {
-        view.addSubview(backButton)
-        backButton.translatesAutoresizingMaskIntoConstraints = false
-        
-        NSLayoutConstraint.activate([
-            backButton.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
-            backButton.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20)
-        ])
-    }
     
     //    MARK: - TextFieldObservers
     
@@ -145,11 +136,11 @@ class NewBookViewController : UIViewController {
     
     func checkFormStatus() {
         if viewModel.formIsValid {
-            doneButton.isEnabled = true
-            doneButton.backgroundColor = .purple
+            addBookButton.isEnabled = true
+            addBookButton.backgroundColor = .purple
         } else {
-            doneButton.isEnabled = false
-            doneButton.backgroundColor = .systemPurple
+            addBookButton.isEnabled = false
+            addBookButton.backgroundColor = .systemPurple
         }
     }
     
