@@ -8,6 +8,10 @@
 import Foundation
 import UIKit
 
+enum Scope : Int {
+    case def = 0, az, za
+}
+
 class BooksTableViewController : UIViewController {
     
     let backgroundImge = UIImageView()
@@ -169,7 +173,7 @@ extension BooksTableViewController : UITableViewDataSource, UITableViewDelegate 
         
         return cell
     }
-//    MARK: - didSelectRowAt
+    //    MARK: - didSelectRowAt
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
         
@@ -188,33 +192,33 @@ extension BooksTableViewController : UITableViewDataSource, UITableViewDelegate 
         present(desVC, animated: true, completion: nil)
     }
     
-//    MARK: - trailingSwipeActionsConfigurationForRowAt
-        func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
-            // Deleted
-            let deletedItem = UIContextualAction(style: .destructive, title: nil) { (contextualAction, view, boolValue) in
-                let favorite = self.booksRead[indexPath.row]
-                self.booksRead.remove(at: indexPath.row)
-                self.tableView.deleteRows(at: [indexPath], with: .automatic)
-                DataManager.uppdateWith(favorite: favorite, actionType: .remove) { error in
-                    guard let error = error else {return}
-                    self.presentAlertVC(title: "Upss", message: error.rawValue)
-                }
-                self.presentAlertVC(title: "Succes", message: Messages.successfullyRemove.rawValue)
+    //    MARK: - trailingSwipeActionsConfigurationForRowAt
+    func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+        // Deleted
+        let deletedItem = UIContextualAction(style: .destructive, title: nil) { (contextualAction, view, boolValue) in
+            let favorite = self.booksRead[indexPath.row]
+            self.booksRead.remove(at: indexPath.row)
+            self.tableView.deleteRows(at: [indexPath], with: .automatic)
+            DataManager.uppdateWith(favorite: favorite, actionType: .remove) { error in
+                guard let error = error else {return}
+                self.presentAlertVC(title: "Upss", message: error.rawValue)
             }
-            deletedItem.image = UIImage(systemName: "xmark", withConfiguration:UIImage.SymbolConfiguration(weight: .light))?.withTintColor(.black, renderingMode: .alwaysOriginal)
-            deletedItem.backgroundColor = UIColor(displayP3Red: 0, green: 0, blue: 0, alpha: 0.1)
-            
-            // Share
-            let shareItem = UIContextualAction(style: .normal, title: nil) { contextualAction, view, boolValue in
-                self.presentAlertVC(title: "Upps", message: Messages.subscription.rawValue)
-            }
-            shareItem.image = UIImage(systemName: "arrow.up", withConfiguration:UIImage.SymbolConfiguration(weight: .light))?.withTintColor(.black, renderingMode: .alwaysOriginal)
-            shareItem.backgroundColor =  UIColor(displayP3Red: 0, green: 0, blue: 0, alpha: 0.1)
-    
-            let swipeActions = UISwipeActionsConfiguration(actions: [deletedItem, shareItem])
-    
-            return swipeActions
+            self.presentAlertVC(title: "Succes", message: Messages.successfullyRemove.rawValue)
         }
+        deletedItem.image = UIImage(systemName: "xmark", withConfiguration:UIImage.SymbolConfiguration(weight: .light))?.withTintColor(.black, renderingMode: .alwaysOriginal)
+        deletedItem.backgroundColor = UIColor(displayP3Red: 0, green: 0, blue: 0, alpha: 0.1)
+        
+        // Share
+        let shareItem = UIContextualAction(style: .normal, title: nil) { contextualAction, view, boolValue in
+            self.presentAlertVC(title: "Upps", message: Messages.subscription.rawValue)
+        }
+        shareItem.image = UIImage(systemName: "arrow.up", withConfiguration:UIImage.SymbolConfiguration(weight: .light))?.withTintColor(.black, renderingMode: .alwaysOriginal)
+        shareItem.backgroundColor =  UIColor(displayP3Red: 0, green: 0, blue: 0, alpha: 0.1)
+        
+        let swipeActions = UISwipeActionsConfiguration(actions: [deletedItem, shareItem])
+        
+        return swipeActions
+    }
 }
 
 // MARK: - UISearchBarDelegate
@@ -240,19 +244,28 @@ extension BooksTableViewController : UISearchBarDelegate {
     }
     
     //    MARK: - selectedScopeButtonIndexDidChange
+    
     func searchBar(_ searchBar: UISearchBar, selectedScopeButtonIndexDidChange selectedScope: Int) {
-        if selectedScope == 0 {
+    
+        let scope = Scope(rawValue: selectedScope)
+        switch scope {
+        case .def:
             isSearching = false
             filteredBooks = booksRead
             tableView.reloadData()
-        } else if  selectedScope == 1{
+        case .az :
             isSearching = true
             filteredBooks = booksRead.sorted { $0.title < $1.title }
             tableView.reloadData()
-        } else {
+        case .za :
             isSearching = true
             filteredBooks = booksRead.sorted { $0.title > $1.title }
             tableView.reloadData()
+        
+        case .none:
+            print("none")
+        case .some(_):
+            print("some")
         }
     }
 }
