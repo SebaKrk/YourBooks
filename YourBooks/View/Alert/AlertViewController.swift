@@ -14,6 +14,16 @@ class AlertViewController : UIViewController {
     let messageLabel = UILabel()
     let dissmisButton = UIButton()
     
+
+    init(title : String, message: String) {
+        super.init(nibName: nil, bundle: nil)
+        titleLabel.text = title
+        messageLabel.text = message
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,16 +40,6 @@ class AlertViewController : UIViewController {
         configureTitleLabel()
         configureButton()
         configureMessageLabel()
-    }
-    
-    init(title : String, message: String) {
-        super.init(nibName: nil, bundle: nil)
-        titleLabel.text = title
-        messageLabel.text = message
-    }
-    
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
     }
     
     @objc func handleDissmisButton() {

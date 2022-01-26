@@ -20,7 +20,6 @@ class DoneButton : UIButton {
     private func configure() {
         setTitle("DONE", for: .normal)
         backgroundColor = .systemPurple
-        //titleLabel?.font = UIFont(name: "Baskerville", size: 20)
         titleLabel?.font = UIFont.systemFont(ofSize: 16, weight: .regular)
         layer.cornerRadius = 5
         isEnabled = false
