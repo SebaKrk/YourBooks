@@ -52,6 +52,9 @@ class BooksTableViewController : UIViewController {
         navigationController?.navigationBar.isHidden = false
         navigationController?.navigationBar.prefersLargeTitles = true
         navigationController?.navigationBar.tintColor = .systemPurple
+        
+        navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(handleAddButton))
+        
     }
     
     //  MARK: - SearchBar
@@ -136,8 +139,8 @@ class BooksTableViewController : UIViewController {
     private func configurePlusButton() {
         view.addSubview(plusButton)
         plusButton.translatesAutoresizingMaskIntoConstraints = false
-        
         plusButton.addTarget(self, action: #selector(handleAddButton), for: .touchUpInside)
+        plusButton.isHidden = true
         
         NSLayoutConstraint.activate([
             plusButton.bottomAnchor.constraint(equalTo: view.bottomAnchor,constant: -25),
