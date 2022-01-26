@@ -41,7 +41,7 @@ class NewBookViewController : UIViewController {
         configureTitleLabel()
         configureButton()
         configureBackButton()
-        dissmisKeybordTapgesture()
+        view.addDismissKeyboardOnTapGesture()
     }
     
     //    MARK: - StackView
