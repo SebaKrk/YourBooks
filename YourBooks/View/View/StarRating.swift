@@ -32,7 +32,11 @@ class StarRating : UIView {
         let nummerOfStars = 5
         
         for _ in 1...nummerOfStars {
-            let star = UIImageView(image:UIImage(systemName: "star", withConfiguration:UIImage.SymbolConfiguration(weight: .regular))?.withTintColor(.purple, renderingMode: .alwaysOriginal))
+            let star = UIImageView(image:UIImage(systemName: "star",
+                                                    withConfiguration:UIImage.SymbolConfiguration(
+                                                    weight: .regular))?
+                                                    .withTintColor(.purple,
+                                                    renderingMode: .alwaysOriginal))
             starStackView.addArrangedSubview(star)
         }
     }
