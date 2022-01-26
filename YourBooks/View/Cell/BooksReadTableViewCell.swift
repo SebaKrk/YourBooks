@@ -33,7 +33,7 @@ class BooksReadTableViewCell : UITableViewCell {
         authorBookLabel.text = bookData.author
     }
     private func configureContainer() {
-        addSubview(container)
+        contentView.addSubview(container)
         container.translatesAutoresizingMaskIntoConstraints = false
         
         container.backgroundColor = UIColor(displayP3Red: 37, green: 37, blue: 37, alpha: 0.3)
@@ -42,10 +42,10 @@ class BooksReadTableViewCell : UITableViewCell {
         container.layer.borderColor = UIColor.lightGray.cgColor
         
         NSLayoutConstraint.activate([
-            container.topAnchor.constraint(equalTo: topAnchor,constant: 10),
-            container.leadingAnchor.constraint(equalTo: leadingAnchor,constant: 10),
-            container.trailingAnchor.constraint(equalTo: trailingAnchor,constant: -10),
-            container.bottomAnchor.constraint(equalTo: bottomAnchor,constant: -10)
+            container.topAnchor.constraint(equalTo: contentView.topAnchor,constant: 10),
+            container.leadingAnchor.constraint(equalTo: contentView.leadingAnchor,constant: 10),
+            container.trailingAnchor.constraint(equalTo: contentView.trailingAnchor,constant: -10),
+            container.bottomAnchor.constraint(equalTo: contentView.bottomAnchor,constant: -10)
         ])
     }
     
