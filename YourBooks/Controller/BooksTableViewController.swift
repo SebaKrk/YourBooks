@@ -250,7 +250,7 @@ extension BooksTableViewController : UISearchBarDelegate {
     func searchBar(_ searchBar: UISearchBar, selectedScopeButtonIndexDidChange selectedScope: Int) {
     
         let scope = Scope(rawValue: selectedScope)
-        switch scope {
+        switch scope! {
         case .def:
             isSearching = false
             filteredBooks = booksRead
@@ -263,11 +263,6 @@ extension BooksTableViewController : UISearchBarDelegate {
             isSearching = true
             filteredBooks = booksRead.sorted { $0.title > $1.title }
             tableView.reloadData()
-        
-        case .none:
-            print("none")
-        case .some(_):
-            print("some")
         }
     }
 }
