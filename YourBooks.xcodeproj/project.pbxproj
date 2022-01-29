@@ -25,7 +25,7 @@
 		93BBFB7E279959E6007C807E /* UIView+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93BBFB7D279959E6007C807E /* UIView+Ext.swift */; };
 		93BBFB8027995D19007C807E /* NewBookViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93BBFB7F27995D19007C807E /* NewBookViewController.swift */; };
 		93BBFB8327995EE9007C807E /* CostumeTexField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93BBFB8227995EE9007C807E /* CostumeTexField.swift */; };
-		93BBFB852799628C007C807E /* DoneButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93BBFB842799628C007C807E /* DoneButton.swift */; };
+		93BBFB852799628C007C807E /* AddNewBookButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93BBFB842799628C007C807E /* AddNewBookButton.swift */; };
 		93BBFB87279966E1007C807E /* BackButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93BBFB86279966E1007C807E /* BackButton.swift */; };
 		93BBFB8927996B37007C807E /* ValidModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93BBFB8827996B37007C807E /* ValidModel.swift */; };
 		93BBFB8C27997F78007C807E /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93BBFB8B27997F78007C807E /* DataManager.swift */; };
@@ -55,7 +55,7 @@
 		93BBFB7D279959E6007C807E /* UIView+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Ext.swift"; sourceTree = "<group>"; };
 		93BBFB7F27995D19007C807E /* NewBookViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewBookViewController.swift; sourceTree = "<group>"; };
 		93BBFB8227995EE9007C807E /* CostumeTexField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CostumeTexField.swift; sourceTree = "<group>"; };
-		93BBFB842799628C007C807E /* DoneButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoneButton.swift; sourceTree = "<group>"; };
+		93BBFB842799628C007C807E /* AddNewBookButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewBookButton.swift; sourceTree = "<group>"; };
 		93BBFB86279966E1007C807E /* BackButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackButton.swift; sourceTree = "<group>"; };
 		93BBFB8827996B37007C807E /* ValidModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidModel.swift; sourceTree = "<group>"; };
 		93BBFB8B27997F78007C807E /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
@@ -135,7 +135,7 @@
 			isa = PBXGroup;
 			children = (
 				93BBFB68279954A3007C807E /* PlusButton.swift */,
-				93BBFB842799628C007C807E /* DoneButton.swift */,
+				93BBFB842799628C007C807E /* AddNewBookButton.swift */,
 				93BBFB86279966E1007C807E /* BackButton.swift */,
 			);
 			path = UIButton;
@@ -307,7 +307,7 @@
 				93BBFB7927995950007C807E /* BookViewController.swift in Sources */,
 				93BBFB76279956C5007C807E /* BookModel.swift in Sources */,
 				930F68BE2799F0400060E22A /* StarRating.swift in Sources */,
-				93BBFB852799628C007C807E /* DoneButton.swift in Sources */,
+				93BBFB852799628C007C807E /* AddNewBookButton.swift in Sources */,
 				93BBFB8927996B37007C807E /* ValidModel.swift in Sources */,
 				93BBFB8027995D19007C807E /* NewBookViewController.swift in Sources */,
 				93BBFB6E279955D8007C807E /* BooksReadTableViewCell.swift in Sources */,
@@ -456,6 +456,7 @@
 				DEVELOPMENT_TEAM = 8RH4482R36;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = YourBooks/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = YourBooks;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
@@ -466,7 +467,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = SebastianSciuba.YourBooks;
+				PRODUCT_BUNDLE_IDENTIFIER = SebastianSciuba.YourBook;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -484,6 +485,7 @@
 				DEVELOPMENT_TEAM = 8RH4482R36;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = YourBooks/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = YourBooks;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
@@ -494,7 +496,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = SebastianSciuba.YourBooks;
+				PRODUCT_BUNDLE_IDENTIFIER = SebastianSciuba.YourBook;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;

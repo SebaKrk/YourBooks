@@ -7,7 +7,7 @@
 
 import UIKit
 
-class DoneButton : UIButton {
+class AddNewBookButton : UIButton {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -18,7 +18,7 @@ class DoneButton : UIButton {
         fatalError("init(coder:) has not been implemented")
     }
     private func configure() {
-        setTitle("DONE", for: .normal)
+        setTitle("Add new Book", for: .normal)
         backgroundColor = .systemPurple
         titleLabel?.font = UIFont.systemFont(ofSize: 16, weight: .regular)
         layer.cornerRadius = 5

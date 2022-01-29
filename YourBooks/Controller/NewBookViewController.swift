@@ -19,7 +19,7 @@ class NewBookViewController : UIViewController {
     
     private let bookScore = StarRating()
     private let bookIMG = UIImageView()
-    private let addBookButton = DoneButton()
+    private let addBookButton = AddNewBookButton()
 
     private var viewModel = ValidModel()
     
