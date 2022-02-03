@@ -190,6 +190,9 @@ extension BooksTableViewController : UITableViewDataSource, UITableViewDelegate 
             sheet.prefersScrollingExpandsWhenScrolledToEdge = false
             sheet.prefersEdgeAttachedInCompactHeight = true
             sheet.widthFollowsPreferredContentSizeWhenEdgeAttached = true
+            sheet.prefersGrabberVisible = true
+            sheet.selectedDetentIdentifier = .medium
+            //sheet.largestUndimmedDetentIdentifier = .medium // odpowiedzialne czy moge przesuwac rowniez cell
         }
         present(desVC, animated: true, completion: nil)
     }
