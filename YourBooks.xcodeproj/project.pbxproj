@@ -13,7 +13,6 @@
 		93BBFB5327994F52007C807E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93BBFB5227994F52007C807E /* AppDelegate.swift */; };
 		93BBFB5527994F52007C807E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93BBFB5427994F52007C807E /* SceneDelegate.swift */; };
 		93BBFB5C27994F55007C807E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 93BBFB5B27994F55007C807E /* Assets.xcassets */; };
-		93BBFB5F27994F55007C807E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 93BBFB5D27994F55007C807E /* LaunchScreen.storyboard */; };
 		93BBFB6727994FD9007C807E /* BooksTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93BBFB6627994FD9007C807E /* BooksTableViewController.swift */; };
 		93BBFB69279954A3007C807E /* PlusButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93BBFB68279954A3007C807E /* PlusButton.swift */; };
 		93BBFB6E279955D8007C807E /* BooksReadTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93BBFB6D279955D8007C807E /* BooksReadTableViewCell.swift */; };
@@ -42,7 +41,6 @@
 		93BBFB5227994F52007C807E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		93BBFB5427994F52007C807E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		93BBFB5B27994F55007C807E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		93BBFB5E27994F55007C807E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		93BBFB6027994F55007C807E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		93BBFB6627994FD9007C807E /* BooksTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BooksTableViewController.swift; sourceTree = "<group>"; };
 		93BBFB68279954A3007C807E /* PlusButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlusButton.swift; sourceTree = "<group>"; };
@@ -112,7 +110,6 @@
 				93BBFB6A279954D3007C807E /* View */,
 				93BBFB6C2799551B007C807E /* Controller */,
 				93BBFB5B27994F55007C807E /* Assets.xcassets */,
-				93BBFB5D27994F55007C807E /* LaunchScreen.storyboard */,
 				93BBFB6027994F55007C807E /* Info.plist */,
 			);
 			path = YourBooks;
@@ -278,7 +275,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				93BBFB5F27994F55007C807E /* LaunchScreen.storyboard in Resources */,
 				93BBFB5C27994F55007C807E /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -317,17 +313,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXVariantGroup section */
-		93BBFB5D27994F55007C807E /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				93BBFB5E27994F55007C807E /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		93BBFB6127994F55007C807E /* Debug */ = {
